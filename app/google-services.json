@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "11388494664",
+    "project_id": "covid-app-388dd",
+    "storage_bucket": "covid-app-388dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11388494664:android:32ddb17a3dc53b1f52897d",
+        "android_client_info": {
+          "package_name": "com.anurag.covidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11388494664-7mvp3mtd2qki5l2ah51ljagv0fgbe1ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrh7Xe-os3K99xB2Ph8fly3KzhyLVsYsM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11388494664-7mvp3mtd2qki5l2ah51ljagv0fgbe1ai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

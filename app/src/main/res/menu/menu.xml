@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/donate"
+        android:icon="@drawable/ic_hearts"
+        android:title="@string/donate" />
+    <item
+        android:id="@+id/disclaimer"
+        android:icon="@drawable/ic_disclaimer"
+        android:title="@string/disclaimer" />
+    <item
+        android:id="@+id/aboutUs"
+        android:icon="@drawable/ic_about_us"
+        android:title="@string/about_us" />
+    <item
+        android:id="@+id/feedback"
+        android:icon="@drawable/ic_feedback"
+        android:title="@string/feedback" />
+</menu>
