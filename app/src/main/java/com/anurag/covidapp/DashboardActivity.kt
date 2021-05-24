@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -27,6 +29,7 @@ class DashboardActivity : AppCompatActivity() {
     lateinit var covidtestreq:MaterialCardView
     lateinit var helplinereq:MaterialCardView
     lateinit var miscreq:MaterialCardView
+    lateinit var btntakeover:TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +41,7 @@ class DashboardActivity : AppCompatActivity() {
         medicinereq=findViewById(R.id.medicineReq)
         plasmareq=findViewById(R.id.plasmaReq)
         bedsreq=findViewById(R.id.bedsReq)
+        btntakeover=findViewById(R.id.takeOver)
         mealsreq=findViewById(R.id.mealsReq)
         covidtestreq=findViewById(R.id.covidTestReq)
         helplinereq=findViewById(R.id.helplineReq)
@@ -85,6 +89,10 @@ class DashboardActivity : AppCompatActivity() {
         }
         miscreq.setOnClickListener {
             startActivity(Intent(this,MiscGetLocation::class.java))
+            finish()
+        }
+        btntakeover.setOnClickListener {
+            startActivity(Intent(this,Cities::class.java))
             finish()
         }
 
