@@ -39,6 +39,8 @@ class OxygenGetLocation : AppCompatActivity() {
             val arrayAdapter: ArrayAdapter<String> =
                 ArrayAdapter(this, R.layout.single_row_element, arrayList!!)
             autotext.setAdapter(arrayAdapter)
+
+
         }
     }
 
