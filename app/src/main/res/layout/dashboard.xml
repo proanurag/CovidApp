@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e4e4e4"
+    android:background="#f4f4f4"
     android:orientation="vertical"
     tools:context=".DashboardActivity">
 
@@ -15,6 +15,7 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
+            android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -37,6 +38,8 @@
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:scrollbarThumbVertical="@null"
+                android:scrollbarThumbHorizontal="@null"
                 android:layout_below="@+id/appBarLayout">
 
                 <LinearLayout
@@ -48,26 +51,28 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginHorizontal="20dp"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="sans-serif-condensed-medium"
+                        android:textColor="#4D4949"
+                        android:fontFamily="sans-serif-medium"
                         android:text="@string/resource_type"
                         android:textSize="20sp" />
 
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="130dp"
                         android:layout_gravity="center"
                         android:orientation="horizontal">
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/oxygenRequirement"
                             android:layout_width="100dp"
-                            android:layout_height="120dp"
+                            android:layout_height="115dp"
                             android:layout_marginHorizontal="10dp"
                             android:layout_marginTop="10dp"
-                            app:cardBackgroundColor="#F5F5F5"
+                            app:cardCornerRadius="20dp"
+                            app:cardBackgroundColor="#f5f5f5"
                             app:cardElevation="5dp">
 
                             <LinearLayout
@@ -89,9 +94,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginTop="5dp"
-                                    android:fontFamily="sans-serif-condensed-medium"
+                                    android:textColor="#4D4949"
+                                    android:fontFamily="sans-serif-medium"
                                     android:text="@string/oxygen"
-                                    android:textSize="18sp" />
+                                    android:textSize="16sp" />
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
@@ -99,9 +105,10 @@
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/medicineReq"
                             android:layout_width="100dp"
-                            android:layout_height="120dp"
+                            android:layout_height="115dp"
                             android:layout_marginTop="10dp"
                             app:cardBackgroundColor="#F5F5F5"
+                            app:cardCornerRadius="20dp"
                             app:cardElevation="5dp">
 
                             <LinearLayout
@@ -123,18 +130,20 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginTop="5dp"
-                                    android:fontFamily="sans-serif-condensed-medium"
+                                    android:textColor="#4D4949"
+                                    android:fontFamily="sans-serif-medium"
                                     android:text="@string/medicine"
-                                    android:textSize="18sp" />
+                                    android:textSize="16sp" />
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/ambulanceReq"
-                            android:layout_width="110dp"
-                            android:layout_height="120dp"
+                            android:layout_width="100dp"
+                            android:layout_height="115dp"
                             android:layout_marginHorizontal="10dp"
+                            app:cardCornerRadius="20dp"
                             android:layout_marginTop="10dp"
                             app:cardBackgroundColor="#F5F5F5"
                             app:cardElevation="5dp">
@@ -158,9 +167,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginTop="5dp"
-                                    android:fontFamily="sans-serif-condensed-medium"
+                                    android:textColor="#4D4949"
+                                    android:fontFamily="sans-serif-medium"
                                     android:text="@string/ambulance"
-                                    android:textSize="18sp" />
+                                    android:textSize="16sp" />
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
@@ -168,15 +178,17 @@
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="5dp"
                         android:layout_gravity="center"
                         android:orientation="horizontal">
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/plasmaReq"
                             android:layout_width="100dp"
-                            android:layout_height="120dp"
+                            android:layout_height="115dp"
                             android:layout_marginHorizontal="10dp"
+                            app:cardCornerRadius="20dp"
                             android:layout_marginTop="10dp"
                             app:cardBackgroundColor="#F5F5F5"
                             app:cardElevation="5dp">
@@ -200,9 +212,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginTop="5dp"
-                                    android:fontFamily="sans-serif-condensed-medium"
+                                    android:textColor="#4D4949"
+                                    android:fontFamily="sans-serif-medium"
                                     android:text="@string/plasma"
-                                    android:textSize="18sp" />
+                                    android:textSize="16sp" />
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
@@ -210,7 +223,8 @@
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/bedsReq"
                             android:layout_width="100dp"
-                            android:layout_height="120dp"
+                            app:cardCornerRadius="20dp"
+                            android:layout_height="115dp"
                             android:layout_marginTop="10dp"
                             app:cardBackgroundColor="#F5F5F5"
                             app:cardElevation="5dp">
@@ -234,19 +248,21 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginTop="5dp"
-                                    android:fontFamily="sans-serif-condensed-medium"
+                                    android:textColor="#4D4949"
+                                    android:fontFamily="sans-serif-medium"
                                     android:text="@string/beds"
-                                    android:textSize="18sp" />
+                                    android:textSize="16sp" />
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/mealsReq"
-                            android:layout_width="110dp"
-                            android:layout_height="120dp"
+                            android:layout_width="100dp"
+                            android:layout_height="115dp"
                             android:layout_marginHorizontal="10dp"
                             android:layout_marginTop="10dp"
+                            app:cardCornerRadius="20dp"
                             app:cardBackgroundColor="#F5F5F5"
                             app:cardElevation="5dp">
 
@@ -269,9 +285,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginTop="5dp"
-                                    android:fontFamily="sans-serif-condensed-medium"
+                                    android:textColor="#4D4949"
+                                    android:fontFamily="sans-serif-medium"
                                     android:text="@string/meals"
-                                    android:textSize="18sp" />
+                                    android:textSize="16sp" />
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
@@ -279,7 +296,8 @@
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="5dp"
                         android:layout_gravity="center"
                         android:orientation="horizontal">
 
@@ -287,9 +305,10 @@
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/covidTestReq"
                             android:layout_width="100dp"
-                            android:layout_height="120dp"
+                            android:layout_height="115dp"
                             android:layout_marginHorizontal="10dp"
                             android:layout_marginTop="10dp"
+                            app:cardCornerRadius="20dp"
                             app:cardBackgroundColor="#F5F5F5"
                             app:cardElevation="5dp">
 
@@ -312,9 +331,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginTop="5dp"
-                                    android:fontFamily="sans-serif-condensed-medium"
+                                    android:textColor="#4D4949"
+                                    android:fontFamily="sans-serif-medium"
                                     android:text="@string/covid_test"
-                                    android:textSize="18sp" />
+                                    android:textSize="16sp" />
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
@@ -322,7 +342,8 @@
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/helplineReq"
                             android:layout_width="100dp"
-                            android:layout_height="120dp"
+                            app:cardCornerRadius="20dp"
+                            android:layout_height="115dp"
                             android:layout_marginTop="10dp"
                             app:cardBackgroundColor="#F5F5F5"
                             app:cardElevation="5dp">
@@ -346,17 +367,19 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginTop="5dp"
-                                    android:fontFamily="sans-serif-condensed-medium"
+                                    android:textColor="#4D4949"
+                                    android:fontFamily="sans-serif-medium"
                                     android:text="@string/helpline"
-                                    android:textSize="18sp" />
+                                    android:textSize="16sp" />
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/miscReq"
-                            android:layout_width="110dp"
-                            android:layout_height="120dp"
+                            android:layout_width="100dp"
+                            android:layout_height="115dp"
+                            app:cardCornerRadius="20dp"
                             android:layout_marginHorizontal="10dp"
                             android:layout_marginTop="10dp"
                             app:cardBackgroundColor="#F5F5F5"
@@ -371,19 +394,21 @@
                                     android:layout_width="70dp"
                                     android:layout_height="70dp"
                                     android:layout_gravity="center"
-                                    android:layout_marginTop="10dp"
+                                    android:layout_marginTop="14dp"
+                                    android:layout_marginEnd="2dp"
                                     android:contentDescription="@string/oxy"
-                                    android:padding="5dp"
+                                    android:padding="10dp"
                                     android:src="@drawable/misc" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_marginTop="5dp"
-                                    android:fontFamily="sans-serif-condensed-medium"
-                                    android:text="@string/miscellaneous"
-                                    android:textSize="18sp" />
+                                    android:layout_marginTop="3dp"
+                                    android:textColor="#4D4949"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:text="@string/others"
+                                    android:textSize="16sp" />
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
@@ -391,16 +416,11 @@
                     </LinearLayout>
 
 
-                    <View
-                        android:layout_width="350dp"
-                        android:layout_height="2dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
-                        android:background="#f0f0f0" />
+
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="2dp"
+                        android:layout_height="1.5dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="20dp"
                         android:background="#c4c4c4" />
@@ -408,19 +428,22 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
+                        android:layout_marginVertical="5dp"
                         android:gravity="center"
                         android:orientation="horizontal">
 
                         <Button
                             android:layout_width="150dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="38dp"
                             android:layout_marginHorizontal="15dp"
+                            android:background="@drawable/btndesign"
                             android:text="@string/latest_data" />
 
                         <Button
                             android:layout_width="120dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="20dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/btndesign"
+                            android:layout_marginHorizontal="10dp"
                             android:text="@string/add" />
 
 
@@ -428,94 +451,133 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="2dp"
+                        android:layout_height="1.5dp"
                         android:layout_gravity="center"
 
                         android:background="#c4c4c4" />
 
-                    <Button
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginHorizontal="10dp"
-                        android:layout_marginTop="15dp"
-                        android:backgroundTint="#e4e4e4"
-                        android:drawableEnd="@drawable/ic_arrow"
-                        android:text="Lucknow"
-                        android:textSize="18sp"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:textAlignment="viewStart"
-                        android:textAllCaps="false"
-                        android:textColor="#696969" />
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginHorizontal="10dp"
-                        android:backgroundTint="#e4e4e4"
-                        android:drawableEnd="@drawable/ic_arrow"
-                        android:text="Kanpur"
-                        android:textSize="18sp"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:textAlignment="viewStart"
-                        android:textAllCaps="false"
-                        android:textColor="#696969" />
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginHorizontal="10dp"
-                        android:backgroundTint="#e4e4e4"
-                        android:drawableEnd="@drawable/ic_arrow"
-                        android:text="Agra"
-                        android:textSize="18sp"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:textAlignment="viewStart"
-                        android:textAllCaps="false"
-                        android:textColor="#696969" />
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginHorizontal="10dp"
-                        android:backgroundTint="#e4e4e4"
-                        android:drawableEnd="@drawable/ic_arrow"
-                        android:text="Varanasi"
-                        android:textSize="18sp"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:textAlignment="viewStart"
-                        android:textAllCaps="false"
-                        android:textColor="#696969" />
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginHorizontal="10dp"
-                        android:backgroundTint="#e4e4e4"
-                        android:drawableEnd="@drawable/ic_arrow"
-                        android:text="Ghaziabad"
-                        android:textSize="18sp"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:textAlignment="viewStart"
-                        android:textAllCaps="false"
-                        android:textColor="#696969" />
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginHorizontal="10dp"
-                        android:backgroundTint="#e4e4e4"
-                        android:drawableEnd="@drawable/ic_arrow"
-                        android:text="Prayagraj"
-                        android:textSize="18sp"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:textAlignment="viewStart"
-                        android:textAllCaps="false"
-                        android:textColor="#696969" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/takeOver"
-                        android:text="➔"
-                        android:layout_marginHorizontal="25dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_gravity="end"
-                        android:textSize="23sp"/>
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="#4D4949"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/cities"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:scrollbarThumbVertical="@null"
+                        android:scrollbarThumbHorizontal="@null"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginBottom="10dp">
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="150dp"
+                                android:layout_height="50dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@drawable/btndesign2"
+                                android:elevation="5dp"
+                                android:textColor="#4D4949"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:text="@string/lucknow"
+                                android:textAllCaps="false"
+                                android:textSize="18sp" />
+
+
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="150dp"
+                                android:layout_height="50dp"
+                                android:elevation="5dp"
+                                android:textColor="#4D4949"
+                                android:background="@drawable/btndesign2"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:text="Kanpur"
+                                android:textAllCaps="false"
+                                android:textSize="18sp" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="150dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/btndesign2"
+                                android:textColor="#4D4949"
+                                android:elevation="5dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:text="Agra"
+                                android:textAllCaps="false"
+                                android:textSize="18sp" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="150dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/btndesign2"
+                                android:textColor="#4D4949"
+                                android:fontFamily="sans-serif-medium"
+                                android:elevation="5dp"
+                                android:gravity="center"
+                                android:text="Ghaziabad"
+                                android:textAllCaps="false"
+                                android:textSize="18sp" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="150dp"
+                                android:layout_height="50dp"
+                                android:textColor="#4D4949"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@drawable/btndesign2"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:elevation="5dp"
+                                android:text="Prayagraj"
+                                android:textAllCaps="false"
+                                android:textSize="18sp" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="150dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/btndesign2"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:text="Varanasi"
+                                android:elevation="5dp"
+                                android:textAllCaps="false"
+                                android:textSize="18sp" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="150dp"
+                                android:id="@+id/takeOver"
+                                android:layout_height="50dp"
+                                android:textColor="#4D4949"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@drawable/btndesign2"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:elevation="5dp"
+                                android:text="➔"
+                                android:textAllCaps="false"
+                                android:textSize="18sp" />
+
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
                 </LinearLayout>
             </ScrollView>
         </RelativeLayout>

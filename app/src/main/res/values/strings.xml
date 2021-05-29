@@ -31,4 +31,7 @@
     <string name="location_of_meals_requirement">Location of meal requirement</string>
     <string name="location_of_miscellaneous_requirement">Location of miscellaneous requirement</string>
     <string name="location_of_plasma_requirement">Location of plasma requirement</string>
+    <string name="cities">Cities</string>
+    <string name="others">Others</string>
+    <string name="lucknow">Lucknow</string>
 </resources>
