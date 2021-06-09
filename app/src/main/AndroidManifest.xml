@@ -9,17 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Cities"></activity>
-        <activity android:name=".MiscGetLocation" />
-        <activity android:name=".HelplineGetLocation" />
-        <activity android:name=".CovidTestGetLocation" />
-        <activity android:name=".MealsGetLocation" />
-        <activity android:name=".BedsGetLocation" />
-        <activity android:name=".PlasmaGetLocation" />
-        <activity android:name=".AmbulanceGetLocation" />
-        <activity android:name=".MedicineGetLocation" />
-        <activity android:name=".OxygenGetLocation" />
-        <activity android:name=".DashboardActivity">
+        <activity android:name=".activity.OxygenDisplayDetails"></activity>
+        <activity android:name=".activity.Cities" />
+        <activity android:name=".activity.MiscGetLocation" />
+        <activity android:name=".activity.HelplineGetLocation" />
+        <activity android:name=".activity.CovidTestGetLocation" />
+        <activity android:name=".activity.MealsGetLocation" />
+        <activity android:name=".activity.BedsGetLocation" />
+        <activity android:name=".activity.PlasmaGetLocation" />
+        <activity android:name=".activity.AmbulanceGetLocation" />
+        <activity android:name=".activity.MedicineGetLocation" />
+        <activity android:name=".activity.OxygenGetLocation" />
+        <activity android:name=".activity.DashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
