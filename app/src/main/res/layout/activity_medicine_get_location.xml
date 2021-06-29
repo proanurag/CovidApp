@@ -69,23 +69,25 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="10dp">
+            android:background="#f4f4f4"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_marginTop="20dp">
 
             <AutoCompleteTextView
                 android:id="@+id/etMedicineLocation"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="30dp"
                 android:layout_weight="1"
+                android:inputType="none"
                 android:background="#ffffff"
                 android:hint="@string/location_of_medicine_requirement" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnUploadNotice"
+            android:id="@+id/btnMedCity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"

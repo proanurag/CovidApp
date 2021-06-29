@@ -4,20 +4,58 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
+import android.widget.Button
 import androidx.appcompat.widget.Toolbar
 import com.anurag.covidapp.R
+import com.google.firebase.firestore.FirebaseFirestore
 
 class PlasmaGetLocation : AppCompatActivity() {
     private lateinit var toolbar: Toolbar
-
+    lateinit var autotext: AutoCompleteTextView
+    lateinit var fstore: FirebaseFirestore
+    lateinit var string: String
+    lateinit var btnplascity: Button
+    private var arrayList: ArrayList<String>? = ArrayList()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_plasma_get_location)
         toolbar = findViewById(R.id.toolbar)
+        fstore = FirebaseFirestore.getInstance()
+        autotext = findViewById(R.id.etPlasmaLocation)
+        btnplascity=findViewById(R.id.btnPlasmaCity)
         setSupportActionBar(toolbar)
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Plasma"
+        fstore.collection("Plasma").get().addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                var i = 0
+                for (document in task.result!!) {
+                    string = document.id
+                    arrayList?.add(string)
+                    i += 1
+                }
+            }
+
+
+            val arrayAdapter: ArrayAdapter<String> =
+                ArrayAdapter(this, R.layout.single_row_element, arrayList!!)
+            autotext.setAdapter(arrayAdapter)
+            for (i in 0 until arrayList!!.size){
+                val obj = mutableMapOf<String,String>()
+                obj["count"]="0"
+
+            }
+        }
+        btnplascity.setOnClickListener {
+            val intent = Intent(this,PlasmaDisplayDetails::class.java)
+            intent.putExtra("cityname",autotext.text.toString())
+            startActivity(intent)
+            finish()
+        }
+
     }
     override fun onBackPressed() {
         startActivity(Intent(this, DashboardActivity::class.java))

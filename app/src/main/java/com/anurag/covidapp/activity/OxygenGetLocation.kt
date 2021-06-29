@@ -43,11 +43,6 @@ class OxygenGetLocation : AppCompatActivity() {
             val arrayAdapter: ArrayAdapter<String> =
                 ArrayAdapter(this, R.layout.single_row_element, arrayList!!)
             autotext.setAdapter(arrayAdapter)
-            for (i in 0 until arrayList!!.size){
-                val obj = mutableMapOf<String,String>()
-                obj["count"]="0"
-                fstore.collection("Helpline").document(arrayList!![i]).set(obj)
-            }
 
         }
 btnoxycity.setOnClickListener {
